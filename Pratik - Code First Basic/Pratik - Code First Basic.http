@@ -1,0 +1,6 @@
+@Pratik___Code_First_Basic_HostAddress = http://localhost:5091
+
+GET {{Pratik___Code_First_Basic_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

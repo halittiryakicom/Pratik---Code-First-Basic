@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35312.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pratik - Code First Basic", "Pratik - Code First Basic\Pratik - Code First Basic.csproj", "{AF563F4A-EAD7-419B-A020-F50C91093BE7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7018BE69-322B-46A4-9C3C-DBB413EEAA25}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AF563F4A-EAD7-419B-A020-F50C91093BE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF563F4A-EAD7-419B-A020-F50C91093BE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF563F4A-EAD7-419B-A020-F50C91093BE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF563F4A-EAD7-419B-A020-F50C91093BE7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E335207F-1BE9-4D1A-B3C8-4E2BBD86B749}
+	EndGlobalSection
+EndGlobal
