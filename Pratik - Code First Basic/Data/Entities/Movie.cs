@@ -13,6 +13,7 @@ namespace Pratik___Code_First_Basic.Data.Entities
         public string Title { get; set; }
 
         [Required] // Genre alanının da zorunlu olmasını sağlıyoruz
+        [RegularExpression(@"^(Action|Comedy|Drama)$", ErrorMessage = "Platform yalnızca 'Action', 'Comedy' veya 'Drama' olabilir.")]
         public string Genre { get; set; }
 
         [Required] // ReleaseYear alanının da zorunlu olmasını sağlıyoruz

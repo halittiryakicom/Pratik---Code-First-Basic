@@ -14,6 +14,7 @@ namespace Pratik___Code_First_Basic.Data
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer(@"Server=.\SQLEXPRESS;Database=Library;Trusted_Connection=true");
+            base.OnConfiguring(optionsBuilder);
         }
 
 
@@ -26,23 +27,21 @@ namespace Pratik___Code_First_Basic.Data
             modelBuilder.Entity<Movie>(
                 entity =>
                 {
+                    entity.ToTable("Movies"); //tablo adı
                     entity.HasKey(x => x.Id);// Id'yi birincil anahtar olarak ayarlıyoruz
-                    entity.Property(x => x.Id)
-                          .ValueGeneratedOnAdd(); //otomatik artma
-
-                    entity.Property(x => x.Title)
-                          .IsRequired(); // title alanı zorunlu
-
-                    entity.Property(x => x.Genre)
-                          .IsRequired(); // genre alanı zorunlu
+                    entity.Property(x => x.Title).IsRequired().HasMaxLength(25); // title alanı zorunlu ve max 25 karakter
+                    entity.Property(x => x.Genre).IsRequired().HasMaxLength(25); // genre alanı zorunlu ve max 25 karakter
 
                 });
 
             modelBuilder.Entity<Game>(
                 entity =>
                 {
-                    entity.Property(x => x.Rating)
-                          .HasPrecision(3, 1); //1-10 arasında rating değeri aldırır.
+                    entity.ToTable("Games"); //tablo adı
+                    entity.HasKey(x => x.Id); //Birincil anahtar
+                    entity.Property(x => x.Name).IsRequired().HasMaxLength(25); // Zorunlu alan ve max 25 karakter
+                    entity.Property(x => x.Platform).IsRequired().HasMaxLength(25); // Zorunlu alan ve max 25 karakter
+                    entity.Property(x => x.Rating).IsRequired().HasColumnType("decimal(3, 1)"); //3 bamaklı değer alır 1 tanesi virgül sonrası.
                 });
         }
     }
